@@ -1,0 +1,22 @@
+flavors:
+  noneProd:
+    app:
+      name: "Gelivery Tracker"
+      icon: "assets/launcher_icons/none_prod_app_icon.png"
+    android:
+      applicationId: "com.delivery.tracker.noneprod"  
+    ios:
+      bundleId: "com.delivery.tracker.noneprod"
+    macos:
+      bundleId: "com.delivery.tracker.noneprod"  
+  
+  prod:
+    app:
+      name: "Gelivery Tracker"
+      icon: "assets/launcher_icons/app_icon.png"
+    android:
+      applicationId: "com.delivery.tracker"  
+    ios:
+      bundleId: "com.delivery.tracker"
+    macos:
+      bundleId: "com.delivery.tracker"  

@@ -1,0 +1,7 @@
+#include "../../Flutter/noneProdDebug.xcconfig"
+#include "Warnings.xcconfig"
+
+FLUTTER_TARGET=lib/main_noneProd.dart
+ASSET_PREFIX=noneProd
+BUNDLE_NAME=Gelivery Tracker
+BUNDLE_DISPLAY_NAME=Gelivery Tracker
