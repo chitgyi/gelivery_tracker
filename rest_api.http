@@ -1,0 +1,42 @@
+@baseUrl = https://dev.gigagates.com/qq-delivery-backend
+@access_token = {{ auth.response.body.data.access_token }}
+@refresh_token = {{ auth.response.body.data.refresh_token }}
+
+## Login
+# @name auth
+POST {{baseUrl}}/v3/user/
+Content-Type: application/json
+
+{
+    "username" : "admin",
+    "password" : "abc123"
+}
+
+### Request Access Token with Refresh Token
+# @name auth
+POST {{baseUrl}}/v3/user/refresh_token
+Content-Type: application/json
+
+{
+    "accessToken": "{{refresh_token}}"
+}
+
+### Revoke Access Token
+POST {{baseUrl}}/v3/user/revoke_access_token_by_username
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+    "key": "value"
+}
+
+
+### Pickup List
+POST  {{baseUrl}}/v4/pickup/list
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+    "first": 0,
+    "max": 2
+}
