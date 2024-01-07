@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                   context: context,
                   builder: (context) => ConfirmationDialog(
                     title: 'Warning',
-                    content: 'Are you sure want to exit?',
+                    content: 'Are you sure want to logout?',
                     onTapCancelBtn: () => context.pop(),
                     onTapOkBtn: () {
                       context.read<AuthBloc>().logout();
