@@ -38,5 +38,5 @@ jobs:
       # Upload generated apk to the artifacts.
       - uses: actions/upload-artifact@v1
         with:
-          name: android_prod_v1
+          name: gelivery_tracker_prod.apk
           path: build/app/outputs/flutter-apk/app-prod-release.apk
