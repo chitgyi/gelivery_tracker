@@ -8,15 +8,16 @@ import 'package:gelivery_tracker/src/presentation/blocs/login_bloc/login_state.d
 import 'package:injectable/injectable.dart';
 
 @injectable
-final class LoginBloc extends Cubit<LoginState> {
+final class LoginCubit extends Cubit<LoginState> {
   final UseCase<Result<UserEntity>, LoginParam> _login;
-  LoginBloc(this._login) : super(const LoginInitialState());
+  LoginCubit(this._login) : super(const LoginInitialState());
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
   bool agreedTermsAndConditions = false;
 
   void login() async {
+    print("login");
     emit(const LoginLoadingState());
     if (usernameController.text.trim().isEmpty) {
       return emit(const LoginFailedState(

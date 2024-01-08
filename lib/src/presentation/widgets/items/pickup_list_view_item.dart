@@ -71,6 +71,7 @@ class PickupListViewItem extends StatelessWidget {
                     pickupEntity.pickupDateTime.toDefaultDateFormat(),
                     style: const TextStyle(
                       height: 2,
+                      fontSize: 12,
                     ),
                   ),
                   Text(

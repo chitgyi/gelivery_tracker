@@ -40,7 +40,7 @@ import 'package:gelivery_tracker/src/domain/usecases/login.dart' as _i19;
 import 'package:gelivery_tracker/src/domain/usecases/logout.dart' as _i21;
 import 'package:gelivery_tracker/src/presentation/blocs/auth_bloc/auth_bloc.dart'
     as _i22;
-import 'package:gelivery_tracker/src/presentation/blocs/login_bloc/login_bloc.dart'
+import 'package:gelivery_tracker/src/presentation/blocs/login_bloc/login_cubit.dart'
     as _i23;
 import 'package:gelivery_tracker/src/presentation/blocs/pickup_bloc/pickup_bloc.dart'
     as _i24;
@@ -90,11 +90,11 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i20.GetUser(gh<_i9.AuthRepo>()));
     gh.factory<_i15.UseCase<_i15.Result<void>, _i21.LogoutParam>>(
         () => _i21.Logout(gh<_i9.AuthRepo>()));
-    gh.factory<_i22.AuthBloc>(() => _i22.AuthBloc(
+    gh.factory<_i22.AuthCubit>(() => _i22.AuthCubit(
           gh<_i15.UseCase<_i15.Result<_i18.UserEntity>, _i20.GetUserParam>>(),
           gh<_i15.UseCase<_i15.Result<void>, _i21.LogoutParam>>(),
         ));
-    gh.factory<_i23.LoginBloc>(() => _i23.LoginBloc(
+    gh.factory<_i23.LoginCubit>(() => _i23.LoginCubit(
         gh<_i15.UseCase<_i15.Result<_i18.UserEntity>, _i19.LoginParam>>()));
     gh.factory<_i24.PickupCubit>(() => _i24.PickupCubit(gh<
         _i15.UseCase<_i15.Result<_i16.PickupListWithCountEntity>,

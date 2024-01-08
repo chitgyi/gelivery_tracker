@@ -26,9 +26,9 @@ class ServerFailure extends Failure {
   ]);
 }
 
-class AccountLockFailure extends Failure {
-  const AccountLockFailure([
-    super.message = 'Something was wrong. We will get back soon!',
+class PermissionFailure extends Failure {
+  const PermissionFailure([
+    super.message = 'You have no access',
   ]);
 }
 

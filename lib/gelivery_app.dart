@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gelivery_tracker/src/di/di.dart';
 import 'package:gelivery_tracker/src/presentation/blocs/auth_bloc/auth_bloc.dart';
+import 'package:gelivery_tracker/src/presentation/blocs/login_bloc/login_cubit.dart';
 import 'package:gelivery_tracker/src/presentation/navigation/app_route_config.dart';
 import 'package:gelivery_tracker/src/presentation/styles/colors.dart';
 
@@ -13,7 +14,8 @@ class GeliveryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => get<AuthBloc>()),
+        BlocProvider(create: (_) => get<AuthCubit>()),
+        BlocProvider(create: (_) => get<LoginCubit>()),
       ],
       child: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(FocusNode()),

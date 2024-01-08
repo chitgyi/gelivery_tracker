@@ -7,10 +7,10 @@ import 'package:gelivery_tracker/src/presentation/blocs/auth_bloc/auth_state.dar
 import 'package:injectable/injectable.dart';
 
 @injectable
-final class AuthBloc extends Cubit<AuthState> {
+final class AuthCubit extends Cubit<AuthState> {
   final UseCase<Result<UserEntity>, GetUserParam> _getUser;
   final UseCase<Result<void>, LogoutParam> _logout;
-  AuthBloc(this._getUser, this._logout) : super(const AuthCheckingState());
+  AuthCubit(this._getUser, this._logout) : super(const AuthCheckingState());
 
   Future<bool> checkAuthState() async {
     final result = await _getUser(const GetUserParam());

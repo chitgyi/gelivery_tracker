@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gelivery_tracker/src/core/utils/failures/network_failure.dart';
+import 'package:gelivery_tracker/src/di/di.dart';
 import 'package:gelivery_tracker/src/presentation/blocs/auth_bloc/auth_bloc.dart';
 import 'package:gelivery_tracker/src/presentation/blocs/pickup_bloc/pickup_bloc.dart';
 import 'package:gelivery_tracker/src/presentation/blocs/pickup_bloc/pickup_state.dart';
@@ -11,13 +13,11 @@ import 'package:go_router/go_router.dart';
 class HomePage extends StatelessWidget {
   const HomePage({
     super.key,
-    required this.onGetPickupCubit,
   });
-  final PickupCubit Function() onGetPickupCubit;
 
   @override
   Widget build(BuildContext context) {
-    final cubit = onGetPickupCubit();
+    final cubit = get<PickupCubit>();
     return BlocProvider<PickupCubit>(
       create: (context) => cubit..loadPickupItems(),
       child: Scaffold(
@@ -33,8 +33,8 @@ class HomePage extends StatelessWidget {
                     content: 'Are you sure want to logout?',
                     onTapCancelBtn: () => context.pop(),
                     onTapOkBtn: () {
-                      context.read<AuthBloc>().logout();
-                      context.pushToLoginPage();
+                      context.read<AuthCubit>().logout();
+                      context.goToLoginPage();
                     },
                   ),
                 ),
@@ -46,6 +46,12 @@ class HomePage extends StatelessWidget {
         ),
         body: BlocListener<PickupCubit, PickupState>(
           listener: (BuildContext context, PickupState state) {
+            if (state case PickupFailureState(failure: final failure)
+                when failure is SessionFailure) {
+              context.read<AuthCubit>().logout();
+              context.goToLoginPage();
+            }
+
             if (state case PickupNextPageFailureState(failure: final failure)) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(

@@ -13,10 +13,12 @@ import 'package:injectable/injectable.dart';
 final class PickupCubit extends Cubit<PickupState> {
   final UseCase<Result<PickupListWithCountEntity>, GetPickupListParams>
       _getPickUpList;
+  late final ScrollController _scrollController;
+
   PickupCubit(this._getPickUpList) : super(const PickupLoadingState()) {
+    _scrollController = ScrollController();
     _scrollController.addListener(listenOnScroll);
   }
-  final ScrollController _scrollController = ScrollController();
 
   @override
   Future<void> close() {

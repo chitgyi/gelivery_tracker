@@ -63,3 +63,10 @@ final class SystemMaintenanceException extends ServerException {
   @override
   Failure toFailure([String? reason]) => ServerFailure(reason ?? message);
 }
+
+final class PermissionDeniedException extends ServerException {
+  const PermissionDeniedException(super.message, [super.statusCode]);
+
+  @override
+  Failure toFailure([String? reason]) => PermissionFailure(reason ?? message);
+}
