@@ -6,9 +6,11 @@ class CheckBoxWithText extends StatefulWidget {
     this.checked = false,
     this.onChanged,
     required this.text,
+    this.onTapLabel,
   });
   final bool checked;
   final void Function(bool value)? onChanged;
+  final VoidCallback? onTapLabel;
   final String text;
 
   @override
@@ -54,7 +56,7 @@ class _CheckBoxWithTextState extends State<CheckBoxWithText> {
               decoration: TextDecoration.underline,
             ),
           ),
-          onPressed: () {},
+          onPressed: () => widget.onTapLabel?.call(),
         ),
       ],
     );

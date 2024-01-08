@@ -5,6 +5,7 @@ import 'package:gelivery_tracker/src/presentation/blocs/login_bloc/login_state.d
 import 'package:gelivery_tracker/src/presentation/widgets/inputs/check_box_with_label.dart';
 import 'package:gelivery_tracker/src/presentation/widgets/inputs/input_text_with_icon.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({
@@ -79,6 +80,7 @@ class LoginPage extends StatelessWidget {
               CheckBoxWithText(
                 text: "Terms & Conditions",
                 onChanged: (value) => bloc.agreedTermsAndConditions = value,
+                onTapLabel: () => launchUrlString('https://quickquality.ltd/'),
               ),
               const SizedBox(height: 8),
               SizedBox(

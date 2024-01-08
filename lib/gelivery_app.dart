@@ -15,29 +15,33 @@ class GeliveryApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_) => get<AuthBloc>()),
       ],
-      child: MaterialApp.router(
-        routerConfig: AppRouteConfig.router,
-        theme: ThemeData(
-          primaryColor: primaryColor,
-          cardTheme: CardTheme(
-            color: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-            ),
-          ),
-          appBarTheme: const AppBarTheme(
-            backgroundColor: primaryColor,
-            titleTextStyle: TextStyle(
+      child: GestureDetector(
+        onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
+        child: MaterialApp.router(
+          routerConfig: AppRouteConfig.router,
+          theme: ThemeData(
+            primaryColor: primaryColor,
+            cardTheme: CardTheme(
               color: Colors.white,
-              fontSize: 18.0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0),
+              ),
             ),
-            systemOverlayStyle: SystemUiOverlayStyle.light,
-            iconTheme: IconThemeData(color: Colors.white),
-          ),
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ButtonStyle(
-              foregroundColor: MaterialStateProperty.all(Colors.white),
-              backgroundColor: MaterialStateProperty.all(Colors.blue.shade900),
+            appBarTheme: const AppBarTheme(
+              backgroundColor: primaryColor,
+              titleTextStyle: TextStyle(
+                color: Colors.white,
+                fontSize: 18.0,
+              ),
+              systemOverlayStyle: SystemUiOverlayStyle.light,
+              iconTheme: IconThemeData(color: Colors.white),
+            ),
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+                backgroundColor:
+                    MaterialStateProperty.all(Colors.blue.shade900),
+              ),
             ),
           ),
         ),

@@ -7,8 +7,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 FutureOr<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final instance = await SharedPreferences.getInstance();
-  set<SharedPreferences>(instance);
+  final sharePref = await SharedPreferences.getInstance();
+  set<SharedPreferences>(sharePref);
   configDependencies();
   runApp(const GeliveryApp());
 }

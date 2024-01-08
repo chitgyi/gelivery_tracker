@@ -469,6 +469,7 @@
 /* Begin XCBuildConfiguration section */
 		010FFF0177F6E281AD4813CB /* Profile-noneProd */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3994B28C1357ED52388423E3 /* noneProdProfile.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSET_PREFIX)AppIcon";
@@ -586,7 +587,7 @@
 		};
 		249021D4217E4FDB00AE95B9 /* Profile */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			baseConfigurationReference = 323EEF2D8054164AF0D1160B /* Pods-Runner.profile.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -657,6 +658,7 @@
 		};
 		5DD6679F80E2CF76CA908970 /* Debug-noneProd */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6B7EA3FB7DA895DC9E530B4 /* noneProdDebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSET_PREFIX)AppIcon";
@@ -729,6 +731,7 @@
 		};
 		804D45B926F58EB03F7578D8 /* Release-noneProd */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F6396120D0EB8557751C905 /* noneProdRelease.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSET_PREFIX)AppIcon";
@@ -905,7 +908,7 @@
 		};
 		97C147061CF9000F007C117D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
+			baseConfigurationReference = 6737AF4D936AF762E1E5CBD7 /* Pods-Runner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -927,7 +930,7 @@
 		};
 		97C147071CF9000F007C117D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
+			baseConfigurationReference = 8C763E4E244BC1390B4FCE5A /* Pods-Runner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -948,6 +951,7 @@
 		};
 		AD3C808BEBB033019DADE753 /* Release-prod */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2B2BF65816FB7FFD11CFC65 /* prodRelease.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSET_PREFIX)AppIcon";
@@ -1025,7 +1029,7 @@
 		};
 		AFEB7B052B4AB798003DE6F2 /* Profile-noneProd */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3994B28C1357ED52388423E3 /* noneProdProfile.xcconfig */;
+			baseConfigurationReference = 850ECCD71F888B994EF992E3 /* Pods-Runner.profile-noneprod.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1033,7 +1037,7 @@
 		};
 		AFEB7B062B4AB798003DE6F2 /* Release-noneProd */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F6396120D0EB8557751C905 /* noneProdRelease.xcconfig */;
+			baseConfigurationReference = F6F1D8C2D468C822EE073117 /* Pods-Runner.release-noneprod.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1041,7 +1045,7 @@
 		};
 		AFEB7B072B4AB798003DE6F2 /* Debug-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB2EF13690DC60AB65EFFAF0 /* prodDebug.xcconfig */;
+			baseConfigurationReference = FFB568EC6F3CAB12B9771DD1 /* Pods-Runner.debug-prod.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1049,7 +1053,7 @@
 		};
 		AFEB7B082B4AB798003DE6F2 /* Profile-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7890659CBB337954C9F135A /* prodProfile.xcconfig */;
+			baseConfigurationReference = C326CE2197B186D51F3F3888 /* Pods-Runner.profile-prod.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1113,6 +1117,7 @@
 		};
 		C52C61787A1411733004E9C6 /* Debug-prod */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB2EF13690DC60AB65EFFAF0 /* prodDebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSET_PREFIX)AppIcon";
@@ -1185,6 +1190,7 @@
 		};
 		FBDEFAFEB16BBEDE2F1F542F /* Profile-prod */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7890659CBB337954C9F135A /* prodProfile.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(ASSET_PREFIX)AppIcon";
@@ -1267,7 +1273,7 @@
 				AFEB7B0F2B4AB798003DE6F2 /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = "Debug-noneProd";
 		};
 		97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */ = {
 			isa = XCConfigurationList;
@@ -1283,7 +1289,7 @@
 				AD3C808BEBB033019DADE753 /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = "Debug-noneProd";
 		};
 		97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */ = {
 			isa = XCConfigurationList;
@@ -1299,7 +1305,7 @@
 				AFEB7B092B4AB798003DE6F2 /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = "Debug-noneProd";
 		};
 /* End XCConfigurationList section */
 	};
