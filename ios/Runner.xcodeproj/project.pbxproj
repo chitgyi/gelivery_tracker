@@ -1017,7 +1017,7 @@
 		};
 		AFEB7B042B4AB798003DE6F2 /* Debug-noneProd */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
+			baseConfigurationReference = 33E4F68BC9A29FF8A8136E8E /* Pods-Runner.debug-noneprod.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1025,7 +1025,7 @@
 		};
 		AFEB7B052B4AB798003DE6F2 /* Profile-noneProd */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 850ECCD71F888B994EF992E3 /* Pods-Runner.profile-noneprod.xcconfig */;
+			baseConfigurationReference = 3994B28C1357ED52388423E3 /* noneProdProfile.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1033,7 +1033,7 @@
 		};
 		AFEB7B062B4AB798003DE6F2 /* Release-noneProd */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F6F1D8C2D468C822EE073117 /* Pods-Runner.release-noneprod.xcconfig */;
+			baseConfigurationReference = 8F6396120D0EB8557751C905 /* noneProdRelease.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1041,7 +1041,7 @@
 		};
 		AFEB7B072B4AB798003DE6F2 /* Debug-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFB568EC6F3CAB12B9771DD1 /* Pods-Runner.debug-prod.xcconfig */;
+			baseConfigurationReference = AB2EF13690DC60AB65EFFAF0 /* prodDebug.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1049,7 +1049,7 @@
 		};
 		AFEB7B082B4AB798003DE6F2 /* Profile-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C326CE2197B186D51F3F3888 /* Pods-Runner.profile-prod.xcconfig */;
+			baseConfigurationReference = E7890659CBB337954C9F135A /* prodProfile.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = Runner;
 			};
@@ -1267,7 +1267,7 @@
 				AFEB7B0F2B4AB798003DE6F2 /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug-noneProd";
+			defaultConfigurationName = Debug;
 		};
 		97C146E91CF9000F007C117D /* Build configuration list for PBXProject "Runner" */ = {
 			isa = XCConfigurationList;
@@ -1283,7 +1283,7 @@
 				AD3C808BEBB033019DADE753 /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug-noneProd";
+			defaultConfigurationName = Debug;
 		};
 		97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */ = {
 			isa = XCConfigurationList;
@@ -1299,7 +1299,7 @@
 				AFEB7B092B4AB798003DE6F2 /* Release-prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Debug-noneProd";
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

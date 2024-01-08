@@ -18,9 +18,15 @@ final class PickupFailureState extends PickupState {
   const PickupFailureState(this.failure);
 }
 
-final class PickupNextPageFailureState extends PickupState {
+final class PickupNextPageFailureState extends PickupSuccessState {
   final Failure failure;
-  const PickupNextPageFailureState(this.failure);
+  const PickupNextPageFailureState({
+    required this.failure,
+    required super.items,
+    required super.page,
+    required super.totalRecords,
+    required super.shouldShowNextPageLoading,
+  });
 }
 
 final class PickupSuccessState extends PickupState {

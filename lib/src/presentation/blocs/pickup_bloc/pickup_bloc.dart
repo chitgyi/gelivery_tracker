@@ -47,33 +47,23 @@ final class PickupCubit extends Cubit<PickupState> {
   }
 
   void loadNextPickupItems() async {
-    if (state
-        case PickupSuccessState(
-          items: final oldItems,
-          hasNextPage: final hasNextPage,
-          totalRecords: final totalRecords,
-          page: final page,
-        )) {
-      if (!hasNextPage) return;
-      emit(PickupSuccessState(
-        items: oldItems,
-        totalRecords: totalRecords,
-        shouldShowNextPageLoading: true,
-        page: page,
-      ));
+    if (state is PickupSuccessState) {
+      final previousState = state as PickupSuccessState;
+      if (!previousState.hasNextPage) return;
+      emit(previousState.copyWith(shouldShowNextPageLoading: true));
 
       final result = await _getPickUpList(
         GetPickupListParams(
-          page + 1,
+          previousState.page + 1,
           pickupListPageSize,
         ),
       );
       switch (result) {
         case Success(data: final data):
-          final items = <PickupEntity>{...oldItems, ...data.items};
+          final items = <PickupEntity>{...previousState.items, ...data.items};
           emit(
             PickupSuccessState(
-              page: page + 1,
+              page: previousState.page + 1,
               items: items.toList(),
               totalRecords: data.totalRecords,
               shouldShowNextPageLoading: false,
@@ -81,7 +71,15 @@ final class PickupCubit extends Cubit<PickupState> {
           );
 
         case Failed(failure: final failure):
-          emit(PickupNextPageFailureState(failure));
+          emit(
+            PickupNextPageFailureState(
+              failure: failure,
+              items: previousState.items,
+              page: previousState.page,
+              totalRecords: previousState.totalRecords,
+              shouldShowNextPageLoading: false,
+            ),
+          );
       }
     }
   }

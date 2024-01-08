@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:gelivery_tracker/flavors.dart';
@@ -28,6 +30,7 @@ abstract class NetworkDIModule {
               PrettyDioLogger(
                 requestBody: true,
                 requestHeader: true,
+                logPrint: (value) => log(value.toString()),
               ),
           ]),
       );
